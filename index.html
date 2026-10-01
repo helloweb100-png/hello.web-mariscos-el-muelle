@@ -30,8 +30,9 @@
     <meta name="theme-color" content="#07182A" media="(prefers-color-scheme: dark)">
 
     <!-- Iconos -->
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="icon" href="img/web/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="img/web/favicon-64.png" type="image/png" sizes="64x64">
+    <link rel="apple-touch-icon" href="img/web/apple-touch-icon.png">
 
     <!-- Fuentes locales (sin peticiones a terceros) -->
     <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -62,6 +63,7 @@
         "@type": "Restaurant",
         "name": "Mariscos El Muelle",
         "alternateName": "Restaurante de Mariscos El Muelle",
+        "logo": "img/web/logo-384.webp",
         "description": "Restaurante de mariscos en Uruapan, Michoacán. Molcajetes, pulpo, camarones, mojarra frita y desayunos.",
         "image": ["img/web/og-cover.jpg", "img/web/hero-bg-d.webp", "img/web/pulpo-camaron-lg.webp"],
         "telephone": "+52 452 155 7950",
@@ -135,7 +137,7 @@
                 <circle class="loader__track" cx="50" cy="50" r="46"/>
                 <circle class="loader__arc" cx="50" cy="50" r="46"/>
             </svg>
-            <svg class="icon loader__icon"><use href="#i-waves"/></svg>
+            <img class="loader__logo" src="img/web/logo-96.webp" srcset="img/web/logo-96.webp 1x, img/web/logo-192.webp 2x" width="64" height="64" fetchpriority="high" alt="">
         </div>
         <p class="loader__brand">Mariscos <strong>El Muelle</strong></p>
         <div class="loader__bar" aria-hidden="true"><span></span></div>
@@ -148,7 +150,7 @@
 <header class="site-header" id="header">
     <div class="wrap nav">
         <a class="brand" href="#inicio" aria-label="Mariscos El Muelle, ir al inicio">
-            <span class="brand__mark"><svg class="icon" aria-hidden="true"><use href="#i-waves"/></svg></span>
+            <span class="brand__mark brand__mark--logo"><img src="img/web/logo-96.webp" srcset="img/web/logo-96.webp 1x, img/web/logo-192.webp 2x" width="46" height="46" alt=""></span>
             <span class="brand__text"><small>Mariscos</small><strong>El Muelle</strong></span>
         </a>
 
@@ -255,6 +257,18 @@
         </div>
     </section>
 
+    <!-- ═══════════ FOTOS: DEL MAR ═══════════ -->
+    <div class="shots-band shots-band--down shots-band--pad">
+        <div class="wrap shots">
+            <figure class="media shot" data-reveal style="--x:1;--s:6;--a:4 / 3;--m:12;"><img src="img/web/p16-sm.webp" srcset="img/web/p16-sm.webp 640w, img/web/p16-lg.webp 1100w" sizes="(min-width:1200px) 568px, (min-width:768px) 50vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Piña rellena con camarones empanizados, almejas y cangrejo"></figure>
+            <figure class="media shot" data-reveal style="--x:7;--s:3;--o:10;"><img src="img/web/p15-sm.webp" srcset="img/web/p15-sm.webp 640w, img/web/p15-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Camarones con piña y verduras a la parrilla en cazuela de barro"></figure>
+            <figure class="media shot" data-reveal style="--x:10;--s:3;--mo:26px;"><img src="img/web/p21-sm.webp" srcset="img/web/p21-sm.webp 640w, img/web/p21-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Molcajete de piedra con ceviche, limón y pepino"></figure>
+            <figure class="media shot" data-reveal style="--x:1;--s:3;--o:8;"><img src="img/web/p14-sm.webp" srcset="img/web/p14-sm.webp 640w, img/web/p14-lg.webp 963w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Camarones con cebolla morada y aguacate en plato ovalado"></figure>
+            <figure class="media shot" data-reveal style="--x:4;--s:3;--mo:26px;"><img src="img/web/p17-sm.webp" srcset="img/web/p17-sm.webp 640w, img/web/p17-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Molcajete con camarones a la parrilla, piña asada y salsa roja"></figure>
+            <figure class="media shot" data-reveal style="--x:7;--s:6;--o:12;--a:4 / 3;--m:12;"><img src="img/web/p12-sm.webp" srcset="img/web/p12-sm.webp 640w, img/web/p12-lg.webp 1100w" sizes="(min-width:1200px) 568px, (min-width:768px) 50vw, 100vw" width="1100" height="825" loading="lazy" decoding="async" alt="Piña rellena con camarones, pollo y cebolla morada"></figure>
+        </div>
+    </div>
+
     <!-- ═══════════ ESPECIALIDAD ═══════════ -->
     <section class="sig section" id="especialidad" aria-labelledby="sig-title">
         <div class="wrap sig__grid">
@@ -298,6 +312,17 @@
             </div>
         </div>
     </section>
+
+    <!-- ═══════════ FOTOS: MOLCAJETES ═══════════ -->
+    <div class="shots-band shots-band--up shots-band--down">
+        <div class="wrap shots">
+            <figure class="media shot" data-reveal style="--x:1;--s:4;--m:8;--mx:1;"><img src="img/web/p05-sm.webp" srcset="img/web/p05-sm.webp 640w, img/web/p05-lg.webp 963w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 67vw" width="963" height="1280" loading="lazy" decoding="async" alt="Molcajete con mariscos, aguacate, pepino y limón"></figure>
+            <figure class="media shot" data-reveal style="--x:6;--s:7;--o:8;--a:4 / 3;--m:12;"><img src="img/web/p24-sm.webp" srcset="img/web/p24-sm.webp 640w, img/web/p24-lg.webp 1100w" sizes="(min-width:1200px) 663px, (min-width:768px) 58vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Charola de ceviche con aguacate, pepino, limón y jícama"></figure>
+            <figure class="media shot" data-reveal style="--x:1;--s:3;--o:8;--m:8;--mx:5;"><img src="img/web/p25-sm.webp" srcset="img/web/p25-sm.webp 640w, img/web/p25-lg.webp 963w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 67vw" width="963" height="1280" loading="lazy" decoding="async" alt="Camarones glaseados con arroz y ensalada"></figure>
+            <figure class="media shot" data-reveal style="--x:4;--s:6;--a:4 / 3;--m:12;"><img src="img/web/p19-sm.webp" srcset="img/web/p19-sm.webp 640w, img/web/p19-lg.webp 1100w" sizes="(min-width:1200px) 568px, (min-width:768px) 50vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Charola de mariscos con ostiones, arroz, papas a la francesa y ensalada"></figure>
+            <figure class="media shot" data-reveal style="--x:10;--s:3;--o:12;--m:8;--mx:1;"><img src="img/web/p30-sm.webp" srcset="img/web/p30-sm.webp 640w, img/web/p30-lg.webp 716w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 67vw" width="716" height="939" loading="lazy" decoding="async" alt="Charola de camarones y filetes de pescado con aguacate y cebolla morada"></figure>
+        </div>
+    </div>
 
     <!-- ═══════════ MENÚ ═══════════ -->
     <section class="menu section" id="menu" aria-labelledby="menu-title">
@@ -411,6 +436,17 @@
         </div>
     </section>
 
+    <!-- ═══════════ FOTOS: DESAYUNOS ═══════════ -->
+    <div class="shots-band shots-band--up shots-band--down">
+        <div class="wrap shots">
+            <figure class="media shot" data-reveal style="--x:1;--s:7;--a:4 / 3;--m:12;"><img src="img/web/p01-sm.webp" srcset="img/web/p01-sm.webp 640w, img/web/p01-lg.webp 1100w" sizes="(min-width:1200px) 663px, (min-width:768px) 58vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Tabla de madera con tostadas, ensalada, queso y crema para compartir"></figure>
+            <figure class="media shot" data-reveal style="--x:9;--s:4;--o:8;"><img src="img/web/p07-sm.webp" srcset="img/web/p07-sm.webp 640w, img/web/p07-lg.webp 963w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Chilaquiles verdes con huevo estrella, aguacate y cebolla morada"></figure>
+            <figure class="media shot" data-reveal style="--x:1;--s:4;--mo:26px;"><img src="img/web/p04-sm.webp" srcset="img/web/p04-sm.webp 640w, img/web/p04-lg.webp 1100w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Chilaquiles con huevo estrella, frijoles refritos y aguacate"></figure>
+            <figure class="media shot" data-reveal style="--x:6;--s:3;--o:12;"><img src="img/web/p06-sm.webp" srcset="img/web/p06-sm.webp 640w, img/web/p06-lg.webp 963w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Huevos estrella con ensalada, aguacate, frijoles y totopos"></figure>
+            <figure class="media shot" data-reveal style="--x:10;--s:3;--mo:26px;"><img src="img/web/p02-sm.webp" srcset="img/web/p02-sm.webp 640w, img/web/p02-lg.webp 963w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Plato con tostadas de ensalada, cebolla morada y queso, con salsa roja"></figure>
+        </div>
+    </div>
+
     <!-- ═══════════ CÓMO PEDIR ═══════════ -->
     <section class="steps section" id="como-pedir" aria-labelledby="steps-title">
         <div class="wrap">
@@ -445,6 +481,18 @@
         </div>
     </section>
 
+    <!-- ═══════════ FOTOS: BEBIDAS ═══════════ -->
+    <div class="shots-band shots-band--up">
+        <div class="wrap shots">
+            <figure class="media shot" data-reveal style="--x:1;--s:3;--o:8;--m:8;--mx:1;"><img src="img/web/p20-sm.webp" srcset="img/web/p20-sm.webp 640w, img/web/p20-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 67vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Bebida cremosa en vaso escarchado con coco rallado"></figure>
+            <figure class="media shot" data-reveal style="--x:4;--s:6;--a:4 / 3;--m:12;"><img src="img/web/p23-sm.webp" srcset="img/web/p23-sm.webp 640w, img/web/p23-lg.webp 1100w" sizes="(min-width:1200px) 568px, (min-width:768px) 50vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Bebida morada con borde escarchado y fruta sobre un plato"></figure>
+            <figure class="media shot" data-reveal style="--x:10;--s:3;--o:14;"><img src="img/web/p00-sm.webp" srcset="img/web/p00-sm.webp 640w, img/web/p00-lg.webp 963w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Dos micheladas con borde de chile y brochetas de fruta frente a un muro con arcos turquesa"></figure>
+            <figure class="media shot" data-reveal style="--x:1;--s:4;--mo:26px;"><img src="img/web/p03-sm.webp" srcset="img/web/p03-sm.webp 640w, img/web/p03-lg.webp 963w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Michelada escarchada con chile y brocheta de limón frente al letrero pintado del restaurante"></figure>
+            <figure class="media shot" data-reveal style="--x:6;--s:3;--o:10;"><img src="img/web/p22-sm.webp" srcset="img/web/p22-sm.webp 640w, img/web/p22-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Michelada con cerveza, camarones y limón en vaso escarchado con chile"></figure>
+            <figure class="media shot" data-reveal style="--x:9;--s:4;--mo:26px;"><img src="img/web/p11-sm.webp" srcset="img/web/p11-sm.webp 640w, img/web/p11-lg.webp 963w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 50vw" width="963" height="1280" loading="lazy" decoding="async" alt="Hamburguesa con papas fritas y un vaso de jugo de naranja"></figure>
+        </div>
+    </div>
+
     <!-- ═══════════ NOSOTROS ═══════════ -->
     <section class="statement section" id="nosotros" aria-labelledby="statement-title">
         <svg class="icon statement__wave" aria-hidden="true"><use href="#i-waves"/></svg>
@@ -459,6 +507,17 @@
             </div>
         </div>
     </section>
+
+    <!-- ═══════════ FOTOS: PLATOS ═══════════ -->
+    <div class="shots-band shots-band--down">
+        <div class="wrap shots">
+            <figure class="media shot" data-reveal style="--x:1;--s:7;--a:4 / 3;--m:12;"><img src="img/web/p26-sm.webp" srcset="img/web/p26-sm.webp 640w, img/web/p26-lg.webp 1100w" sizes="(min-width:1200px) 663px, (min-width:768px) 58vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Charola grande de mariscos con arroz, papas, pescado frito y ensalada"></figure>
+            <figure class="media shot" data-reveal style="--x:9;--s:4;--o:8;"><img src="img/web/p28-sm.webp" srcset="img/web/p28-sm.webp 640w, img/web/p28-lg.webp 1100w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Charola de ceviche con cervezas en hielo al centro"></figure>
+            <figure class="media shot" data-reveal style="--x:1;--s:3;--o:10;--mo:26px;"><img src="img/web/p09-sm.webp" srcset="img/web/p09-sm.webp 640w, img/web/p09-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Pescado frito entero con salsa roja, ensalada y limón"></figure>
+            <figure class="media shot" data-reveal style="--x:4;--s:6;--a:4 / 3;--m:12;"><img src="img/web/p27-sm.webp" srcset="img/web/p27-sm.webp 640w, img/web/p27-lg.webp 1100w" sizes="(min-width:1200px) 568px, (min-width:768px) 50vw, 100vw" width="1100" height="828" loading="lazy" decoding="async" alt="Plato de pescado frito, camarones, arroz y papas a la francesa"></figure>
+            <figure class="media shot" data-reveal style="--x:10;--s:3;--o:14;--m:8;--mx:1;"><img src="img/web/p10-sm.webp" srcset="img/web/p10-sm.webp 640w, img/web/p10-lg.webp 963w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 67vw" width="963" height="1280" loading="lazy" decoding="async" alt="Pescado frito con salsa roja y ensalada, servido en plato ovalado"></figure>
+        </div>
+    </div>
 
     <!-- ═══════════ PREGUNTAS ═══════════ -->
     <section class="faq section" id="preguntas" aria-labelledby="faq-title">
@@ -493,6 +552,18 @@
             </div>
         </div>
     </section>
+
+    <!-- ═══════════ FOTOS: CASA ═══════════ -->
+    <div class="shots-band shots-band--up">
+        <div class="wrap shots">
+            <figure class="media shot" data-reveal style="--x:1;--s:4;"><img src="img/web/p13-sm.webp" srcset="img/web/p13-sm.webp 640w, img/web/p13-lg.webp 1100w" sizes="(min-width:1200px) 379px, (min-width:768px) 33vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Enchiladas verdes con crema y cebolla morada"></figure>
+            <figure class="media shot" data-reveal style="--x:6;--s:3;--o:10;--mo:26px;"><img src="img/web/p18-sm.webp" srcset="img/web/p18-sm.webp 640w, img/web/p18-lg.webp 1100w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="1100" height="1462" loading="lazy" decoding="async" alt="Enchiladas rojas con crema y cebolla morada"></figure>
+            <figure class="media shot" data-reveal style="--x:10;--s:3;--a:2 / 3;--op:50% 50%;"><img src="img/web/p29-sm.webp" srcset="img/web/p29-sm.webp 640w, img/web/p29-lg.webp 720w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="720" height="1071" loading="lazy" decoding="async" alt="Pechuga a la plancha con ensalada de aguacate y jitomate"></figure>
+            <figure class="media shot" data-reveal style="--x:1;--s:3;--o:10;--mo:26px;"><img src="img/web/p32-sm.webp" srcset="img/web/p32-sm.webp 640w, img/web/p32-lg.webp 710w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="710" height="939" loading="lazy" decoding="async" alt="Collage del paso a paso de un platillo con salsa roja y cebolla morada"></figure>
+            <figure class="media shot" data-reveal style="--x:5;--s:3;--a:2 / 3;--op:50% 100%;"><img src="img/web/p33-sm.webp" srcset="img/web/p33-sm.webp 640w, img/web/p33-lg.webp 720w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="720" height="1600" loading="lazy" decoding="async" alt="Pechuga rellena de champiñones bañada con salsa cremosa"></figure>
+            <figure class="media shot" data-reveal style="--x:9;--s:3;--o:14;--a:2 / 3;--mo:26px;--op:50% 40%;"><img src="img/web/p31-sm.webp" srcset="img/web/p31-sm.webp 640w, img/web/p31-lg.webp 719w" sizes="(min-width:1200px) 284px, (min-width:768px) 25vw, 50vw" width="719" height="1128" loading="lazy" decoding="async" alt="Plato con pollo deshebrado, arroz, frijoles y ensalada"></figure>
+        </div>
+    </div>
 
     <!-- ═══════════ CONTACTO ═══════════ -->
     <section class="contact section" id="contacto" aria-labelledby="contact-title">
@@ -597,7 +668,7 @@
     <div class="wrap footer__top">
         <div class="footer__about">
             <a class="brand" href="#inicio" aria-label="Mariscos El Muelle, ir al inicio">
-                <span class="brand__mark"><svg class="icon" aria-hidden="true"><use href="#i-waves"/></svg></span>
+                <span class="brand__mark brand__mark--logo"><img src="img/web/logo-192.webp" srcset="img/web/logo-192.webp 1x, img/web/logo-384.webp 2x" width="64" height="64" loading="lazy" alt=""></span>
                 <span class="brand__text"><small>Mariscos</small><strong>El Muelle</strong></span>
             </a>
             <p>Restaurante de mariscos en Uruapan, Michoacán. Del muelle a tu mesa.</p>

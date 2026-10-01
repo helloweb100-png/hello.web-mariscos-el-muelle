@@ -840,3 +840,58 @@ html.menu-open .fab { opacity: 0; pointer-events: none; }
     .fab::before, .statement__wave { animation: none; }
     .js [data-reveal], .js .line > span, .js .hero__lead, .js .hero__cta, .js .hero__foot { opacity: 1; translate: 0 0; }
 }
+/* ==========================================================================
+   LOGO NUEVO + FOTOS DE LA CASA
+   Se agrega al final: no modifica ninguna regla anterior.
+   - Logo: insignia circular en cabecera, pie y loader.
+   - Fotos: franjas sin titulo ni tarjetas entre secciones. Cada foto reutiliza
+     .media (esquinas y sombra del sistema) y se coloca en una cuadricula de 12
+     columnas con tamanos y desfases distintos. En movil pasan a 12 columnas
+     con 2 por fila (las horizontales a ancho completo).
+   ========================================================================== */
+.brand__mark--logo { width: 46px; height: 46px; border-radius: 50%; background: none; overflow: hidden; }
+.brand__mark--logo img { width: 100%; height: 100%; object-fit: contain; }
+.site-footer .brand__mark--logo { width: 60px; height: 60px; }
+
+.loader__logo { width: 66px; height: 66px; border-radius: 50%; animation: bob 2.2s ease-in-out infinite; }
+
+.shots-band { position: relative; z-index: 1; }
+.shots-band--up   { margin-top: calc(var(--section) * -.4); }
+.shots-band--down { margin-bottom: calc(var(--section) * -.4); }
+.shots-band--pad  { padding-top: clamp(40px, 6vw, 80px); }
+
+.shots {
+    --sg: clamp(12px, 2.2vw, 28px);
+    --u: min(1vw, 12px);
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--sg); align-items: start;
+}
+.shot {
+    grid-column: var(--mx, auto) / span var(--m, 6);
+    margin-top: var(--mo, 0);
+    aspect-ratio: var(--a, 3 / 4);
+}
+.shot img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: var(--op, 50% 50%);
+    transition: scale 1.3s var(--ease);
+}
+@media (hover: hover) { .shot:hover img { scale: 1.05; } }
+
+@media (min-width: 768px) {
+    .shot { grid-column: var(--x) / span var(--s); margin-top: calc(var(--o, 0) * var(--u)); }
+}
+
+/* Deriva suave con el scroll (mejora progresiva, sin listeners de JS) */
+@supports (animation-timeline: view()) {
+    .shot { animation: shot-up linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; }
+    .shot:nth-child(even) { animation-name: shot-down; }
+}
+@keyframes shot-up   { from { transform: translateY(34px); } to { transform: translateY(-34px); } }
+@keyframes shot-down { from { transform: translateY(58px); } to { transform: translateY(-20px); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .shot { animation: none !important; }
+    .shot img, .shot:hover img { transition: none; scale: 1; }
+    .loader__logo { animation: none; }
+}
